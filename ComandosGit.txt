@@ -1,0 +1,127 @@
+**************************************************************
+************** MANUAL(MIO-LEDZ) PRACTICO DE GIT. *************
+**************************************************************
+En git existen 3 estados.
+1.- Working directory
+--| Aqui se crean archivos y/o las modificaciones de 
+    los archivos.
+2.-Staging area
+--| Aqui se agregan los archivos para el antes del
+    guardado, es como un pre-guardado(local).
+3.- Repository
+--| Aqui se guardan los archivos nuevos y/o carpetas con las 
+    modificaciones que se les hallan aplicado.
+**************************************************************
+****************** COMANDOS BASICOS DE GIT. ******************
+**************************************************************
+1.- git init
+--| Se utiliza para indicar que dentro del directorio
+    en el que nos encontremos se inicializa un proyecto
+    git o mejor dicho un repositorio nuevo.
+2.- git add <file>
+--| Se utiliza para agregar los archivos y/o carpetas
+    al Staging area desde el Working directory de uno por uno.
+    para agregar todos los archivos de golpe simplemente
+    ejecutamos :: git add .
+3.- git status
+--| Se utiliza para ver los estatus de los cambios que
+    se detectan por parte de git.
+4.- git commit
+--| Se utiliza para agregar los archivos y/o carpetas
+    al repositorio desde el Staging area al Repository,
+    esto es en donde utilizamos el comando git init. 
+    Se podria decir que es la primera version.
+5.- git push
+--| Se utiliza para subir los archivos y/o carpetas 
+    a un repositorio remoto.
+6.- git pull
+--| Se utiliza para descargar los archivos y/o carpetas 
+    del repositorio remoto.
+7.- git clone
+--| Se utiliza para hacer una copia del repositorio
+    remoto en el cual vamos a realizar modfificaciones.
+************************************************************
+***************** COMANDOS COMPLEMENTARIOS. ****************
+************************************************************
+1.- git config --global user.email
+--| Seutiliza para insertar el correo electronico 
+    con el que estamos trabajando, esto para que
+    reconozca quien hizo cambios a algo dentro del
+    repositorio.
+2.- git config --global user.name
+--| Se utilizar para dar un alias al email del aquel
+    usuario que esta realizando cambios al repositorio.
+3.- git checkout
+--| Se utiliza para revertir los cambios que se le 
+    han realizado a algun archivo y/o carpetas. Esto
+    siempre y cuando halla modificaciones.
+4.- git diff <file>
+--| Sirve para ver las diferencias entre el archivo
+    modificado y el anterior a este.
+5.- git log
+--| Se utiliza para ver aquellos commits que se le 
+    han hecho al repositorio, mostrando altas y/o bajas
+    de archivos y/o carpetas del repositorio local.
+
+6.- git commit -m
+--| Se utiliza para subir los cambios al repositorio local
+    sin la necesidad de que ejecute el editor de texto vim,
+    ya que permite meter el mensaje de una vez. Ejemplo:
+    git commit -m "AQui va el mensaje..."
+7.- git brach
+--| Se utiliza para saber en que rama es es la que estamos
+    en este preciso momento, master es la por default y es
+    la principal o la de mas alta gerarquia.
+8.- git branch <texto>
+--| Se utiliza para crear una nueva rama, en donde <texto>
+    es el nombre de la nueva rama, esto es para crear por
+    asi decirlo mini versiones del codigo que se va a 
+    modificar. Ejemplo :: git branch 'miRama'
+    Esto creara un por asi llamarlo un alias para el mismo
+    proyecto, pero ya no sera en master donde se encuentre
+    sino que ahora se identificara por el nombre asignado.
+9.- git checkout <texto>
+--| Estos comandos aunque se parece al de revertir los
+    cambios hechos a los archivos y/o carpetas de nuestro
+    repositorio cambiara la rama en la que nos escontramos
+    posicionados por la que metamos en ligar de <texto>.
+    Ejemplo :: git checkout miRama -- este cambiara a la 
+    rama principal(master) por mi rama(miRma).
+10.- git remote -v 
+--| Se utiliza para ver que repositorios remotos tenemos
+    asociados a nuestra cuenta o repositorio local.
+************************************************************
+********* ARCHIVOS Y/O CARPETAS A IGNORAR POR GIT. *********
+************************************************************
+En git podemos ignorar aquellos arcivos y/o carpetas que
+no queremos que que se suban al repositorio, ya que pueden
+ser archivos de configuracion, pruebas, documentos, etc.
+Para ello es necesario crear a nivel del repositorio, osea
+al nivel de donde ejecutamos el comando <<git init>> un 
+archivo llamado [.gitignore]. En el añadiremos todos aquellos
+archivos y/o carpetas que no queremos que el comando de git
+<<git status>> detecte.
+Una vez hecho esto el unico archivo que debemos subir al 
+repositorio es [.gitignore] y en cada modificacion volver
+a subirlo.
+**************************************************************
+NOTAS PERSONALES.
+**************************************************************
+En caso de salir un (faltal: remote origin already exists) con
+respecto a la url que estamos introduciendo para subir codigo,
+es porque en las configuraciones ya existe un alias del 
+repositorio con el nombre origin, en este caso debemos ver con
+los comandos <<git config --list>> que tenemos configurado como
+remote. Ejemplo :: 
+-remote.origin.url=https://github.com/bastekor/prubasGithub.git
+-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+Para solucionar este problema podemos hacer 3 cosas.
+1.- Es cambiar/modificar el nombre con el que se queda la url.
+    git remote set-url --add origin https://tu-url-nueva
+2.- Remover esta configuracion y despues volver a crearla.
+    git remote rm origin
+    git remote add origin http://tu-url
+3.- Asignar otro nombre en lugar de origin.
+    git remote add origin2 https://tu-url
+    
