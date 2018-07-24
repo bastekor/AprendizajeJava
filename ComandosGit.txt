@@ -1,6 +1,7 @@
-**************************************************************
-************** MANUAL(MIO-LEDZ) PRACTICO DE GIT. *************
-**************************************************************
+********************************************************************
+***************** MANUAL(MIO-LEDZ) PRACTICO DE GIT. ****************
+********************************************************************
+
 En git existen 3 estados.
 1.- Working directory
 --| Aqui se crean archivos y/o las modificaciones de 
@@ -11,9 +12,11 @@ En git existen 3 estados.
 3.- Repository
 --| Aqui se guardan los archivos nuevos y/o carpetas con las 
     modificaciones que se les hallan aplicado.
-**************************************************************
-****************** COMANDOS BASICOS DE GIT. ******************
-**************************************************************
+
+********************************************************************
+********************* COMANDOS BASICOS DE GIT. *********************
+********************************************************************
+
 1.- git init
 --| Se utiliza para indicar que dentro del directorio
     en el que nos encontremos se inicializa un proyecto
@@ -40,9 +43,11 @@ En git existen 3 estados.
 7.- git clone
 --| Se utiliza para hacer una copia del repositorio
     remoto en el cual vamos a realizar modfificaciones.
-************************************************************
-***************** COMANDOS COMPLEMENTARIOS. ****************
-************************************************************
+
+******************************************************************
+******************** COMANDOS COMPLEMENTARIOS. *******************
+******************************************************************
+
 1.- git config --global user.email
 --| Seutiliza para insertar el correo electronico 
     con el que estamos trabajando, esto para que
@@ -90,9 +95,27 @@ En git existen 3 estados.
 10.- git remote -v 
 --| Se utiliza para ver que repositorios remotos tenemos
     asociados a nuestra cuenta o repositorio local.
-************************************************************
-********* ARCHIVOS Y/O CARPETAS A IGNORAR POR GIT. *********
-************************************************************
+11.- git branch -D <texto>
+    Este comando se utiliza para eliminar una rama local,
+    ya que en ocaciones es necesario crear nuestras propias
+    ramas tambien lo es eliminarlas para no tener una 
+    lista muy grande de nuetras ramas. Para ello ejecutamos
+    el siguiente comando ::
+    git branch -D <miRama> donde "-D" es un atajo de 
+    --delete --force
+12.- git push origin --delete <texto>
+    Este comando se utiliza para eliminar una rama remota,
+    la descripcion seria la misma que la del paso 11 pero
+    esta seria el el repositorio remoto en el que estamos.
+    Ejemplo::
+    git push <alias_repositorio> --delete <miRama>
+    Donde alias_repositorio es de donde descargamos el
+    codigo y miRama es la rama a eliminar.
+
+******************************************************************
+************ ARCHIVOS Y/O CARPETAS A IGNORAR POR GIT. ************
+******************************************************************
+
 En git podemos ignorar aquellos arcivos y/o carpetas que
 no queremos que que se suban al repositorio, ya que pueden
 ser archivos de configuracion, pruebas, documentos, etc.
@@ -104,9 +127,11 @@ archivos y/o carpetas que no queremos que el comando de git
 Una vez hecho esto el unico archivo que debemos subir al 
 repositorio es [.gitignore] y en cada modificacion volver
 a subirlo.
-**************************************************************
-NOTAS PERSONALES.
-**************************************************************
+
+********************************************************************
+************************ NOTAS PERSONALES. *************************
+********************************************************************
+
 En caso de salir un (faltal: remote origin already exists) con
 respecto a la url que estamos introduciendo para subir codigo,
 es porque en las configuraciones ya existe un alias del 
@@ -124,4 +149,5 @@ Para solucionar este problema podemos hacer 3 cosas.
     git remote add origin http://tu-url
 3.- Asignar otro nombre en lugar de origin.
     git remote add origin2 https://tu-url
-    
+
+**********************************************************************    
