@@ -1,0 +1,2 @@
+El siguiente programa ayuda a generar una fecha con las clases que se hicieron.
+Para poder ver ejemplos de su utilizacion ejecutar Test.java y ver como funciona.
