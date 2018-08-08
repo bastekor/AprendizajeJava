@@ -56,7 +56,7 @@ public class Test {
         System.out.println("------------------------------------------------------------------------------------------");
         FechaDetallada fd1 = new FechaDetallada();
         FechaDetallada fd2 = new FechaDetallada(30, 07, 2018);
-        FechaDetallada fd3 = new FechaDetallada("13/13/2017");
+        FechaDetallada fd3 = new FechaDetallada("13/12/2017");
         FechaDetallada fd4 = new FechaDetallada("11-11-1992");
         FechaDetallada fd5 = new FechaDetallada("12_2_1990");
         FechaDetallada fd6 = new FechaDetallada("28.11.2007");
@@ -64,7 +64,7 @@ public class Test {
         System.out.println("------------------------------------------------------------------------------------------");
         System.out.println("default - FechaDetallada fd1 = new FechaDetallada();");
         System.out.println("int     - FechaDetallada fd2 = new FechaDetallada(30, 07, 2018);");
-        System.out.println("String  - FechaDetallada fd3 = new FechaDetallada(\"13/13/2017\");");
+        System.out.println("String  - FechaDetallada fd3 = new FechaDetallada(\"13/12/2017\");");
         System.out.println("String  - FechaDetallada fd4 = new FechaDetallada(\"11-11-1992\");");
         System.out.println("String  - FechaDetallada fd5 = new FechaDetallada(\"12_2_1990\");");
         System.out.println("String  - FechaDetallada fd6 = new FechaDetallada(\"28.11.2007\");");
@@ -140,7 +140,7 @@ public class Test {
         System.out.println(" + M\u00e9todo Est\u00e1tico\n\tString m6 = FechaHora.crearFecha(10, 10, 1910);");
         System.out.println("\t" + m6 + "\n");
         System.out.println("------------------------------------------------------------------------------------------");
-        System.out.println(" + M\u00e9todo Est\u00e1tico\n\tString m7 = FechaHora.crearFechaDetallada(\"01/01/2000\");");
+        System.out.println(" + M\u00e9todo Est\u00e1tico\n\tString m7 = FechaHora.crearFecha(\"31.12.2000\");");
         System.out.println("\t" + m7 + "\n");
         System.out.println("------------------------------------------------------------------------------------------");
         System.out.println(" + M\u00e9todo Est\u00e1tico\n\tString m8 = FechaHora.crearFechaDetallada(23, 10, 2018);");

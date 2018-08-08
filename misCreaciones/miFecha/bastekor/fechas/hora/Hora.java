@@ -99,7 +99,7 @@ public class Hora extends FechaNoValidaException {
      */
     @Override
     public String toString() {
-        return addZero(String.valueOf(getiHora())) + ":" + addZero(String.valueOf(getiMinuto())) + ":" + addZero(String.valueOf(getiSegundo()));
+        return String.format("%02d", getiHora()) + ":" + String.format("%02d", getiMinuto()) + ":" + String.format("%02d", getiSegundo());
     }
 
     // Validar formato valido para horas

@@ -21,11 +21,4 @@ public class FechaNoValidaException extends Exception {
     protected void mensajesThrows(String msj) throws FechaNoValidaException {
         throw new FechaNoValidaException(msj);
     }
-    // agregar 0 a los numeros de los dias y si se requiere a los meses en numeros
-    protected String addZero(String num) {
-        if (num.length() < 2) {
-            num = "0" + num;
-        }
-        return num;
-    }
 }

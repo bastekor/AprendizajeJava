@@ -161,8 +161,8 @@ public class Fecha extends FechaNoValidaException {
     public Fecha asignaCaracter(String caracter) throws FechaNoValidaException {
         String expReg = "[\\._\\/-]";
         if (Pattern.matches(expReg, caracter.trim())) {
-            return new Fecha(addZero(String.valueOf(getiDia())) + caracter + addZero(String.valueOf(getiMes()))
-                    + caracter + String.valueOf(getiAnio()));
+            return new Fecha(String.format("%02d", getiDia()) + caracter + String.format("%02d", getiMes())
+                    + caracter + String.format("%02d", getiAnio()));
         } else {
             mensajesThrows("El car\u00e1cter que introdujo no es reconocido.");
             return null;
@@ -180,8 +180,8 @@ public class Fecha extends FechaNoValidaException {
      */
     @Override
     public String toString() {
-        return addZero(String.valueOf(getiDia())) + formatoCaracter + addZero(String.valueOf(getiMes())) + formatoCaracter
-                + addZero(String.valueOf(getiAnio()));
+        return String.format("%02d", getiDia()) + formatoCaracter + String.format("%02d", getiMes()) + formatoCaracter +
+                String.valueOf(getiAnio());
     }
 
 

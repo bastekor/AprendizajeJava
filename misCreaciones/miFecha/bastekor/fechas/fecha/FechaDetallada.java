@@ -57,7 +57,7 @@ public class FechaDetallada extends Fecha {
     public String toString() {
         iDiaDeLaSemana =
         LocalDate.of(getiAnio(), getiMes(), getiDia()).getDayOfWeek().getValue();
-        return NOMBRE_DEL_DIA[iDiaDeLaSemana] + ", " + addZero(String.valueOf(getiDia())) + " de " + NOMBRE_DEL_MES[getiMes() - 1] + " de " + getiAnio();
+        return NOMBRE_DEL_DIA[iDiaDeLaSemana] + ", " + String.format("%02d", getiDia()) + " de " + NOMBRE_DEL_MES[getiMes() - 1] + " de " + getiAnio();
     }
 
 }
